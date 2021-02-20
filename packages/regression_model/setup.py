@@ -1,6 +1,14 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+import os, sys 
+from pathlib import Path
+
+if os.path.abspath(os.pardir) not in sys.path :
+    sys.path.append(os.pardir) 
+if os.path.dirname(os.path.realpath(__file__)) not in sys.path :
+    sys.path.append(os.path.dirname(os.path.realpath(__file__)))
+
 import io
 import os
 from pathlib import Path
@@ -10,10 +18,14 @@ from setuptools import find_packages, setup
 
 # Package meta-data.
 NAME = 'regression_model'
-DESCRIPTION = 'Train and deploy regression model.'
-URL = 'your github project'
-EMAIL = 'your_email@email.com'
-AUTHOR = 'Your name'
+# DESCRIPTION = 'Train and deploy regression model.'
+# URL = 'your github project'
+# EMAIL = 'your_email@email.com'
+# AUTHOR = 'Your name'
+DESCRIPTION = 'Former et deployer un modele de regression.'
+URL = 'https://github.com/ZiedHanchi/deploy.git'
+EMAIL = 'zied_hanchi1980@yahoo.fr'
+AUTHOR = 'Zied Hanchi'
 REQUIRES_PYTHON = '>=3.6.0'
 
 
