@@ -15,6 +15,9 @@ if sep.join(dirname(realpath(__file__)).split("/")[:-1]) + sep + "api" not in sy
     sys.path.append(sep.join(dirname(realpath(__file__)).split("/")[:-1]) + sep + "api")
 if Path(os.path.dirname(os.path.realpath(__file__))).parent not in sys.path :
     sys.path.append(str(Path(os.path.dirname(os.path.realpath(__file__))).parent))  
+if Path(os.path.dirname(os.path.realpath(__file__))).parent.parent not in sys.path :
+    sys.path.append(str(Path(os.path.dirname(os.path.realpath(__file__))).parent.parent))  
+
 
 import json
 
