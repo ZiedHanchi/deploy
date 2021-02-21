@@ -126,7 +126,7 @@ venv.bak/
 .idea/
 
 # pickle files
-*.pkl
+#*.pkl
 
 # datafiles
 packages/regression_model/regression_model/datasets/*.csv
