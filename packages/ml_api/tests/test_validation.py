@@ -1,6 +1,7 @@
 import sys
 import os
 from os.path import dirname, realpath, sep, pardir
+from pathlib import Path
 
 if dirname(realpath(__file__)) not in sys.path :
     sys.path.append(dirname(realpath(__file__)))
@@ -12,6 +13,8 @@ if sep.join(dirname(realpath(__file__)).split("/")[:-2]) + sep + "regression_mod
     sys.path.append(sep.join(dirname(realpath(__file__)).split("/")[:-2]) + sep + "regression_model" + sep + "regression_model")
 if sep.join(dirname(realpath(__file__)).split("/")[:-1]) + sep + "api" not in sys.path :
     sys.path.append(sep.join(dirname(realpath(__file__)).split("/")[:-1]) + sep + "api")
+if Path(os.path.dirname(os.path.realpath(__file__))).parent not in sys.path :
+    sys.path.append(str(Path(os.path.dirname(os.path.realpath(__file__))).parent))  
 
 import json
 
