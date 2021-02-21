@@ -1,3 +1,13 @@
+import os, sys
+from pathlib import Path
+
+
+if Path(os.path.dirname(os.path.realpath(__file__))).parent not in sys.path :
+    sys.path.append(str(Path(os.path.dirname(os.path.realpath(__file__))).parent))
+  
+if os.path.dirname(os.path.realpath(__file__)) not in sys.path :
+    sys.path.append(os.path.dirname(os.path.realpath(__file__)))
+
 import math
 
 from regression_model.predict import make_prediction
