@@ -1,11 +1,17 @@
 import sys
 import os
 from os.path import dirname, realpath, sep, pardir
+from pathlib import Path
 
 if dirname(realpath(__file__)) not in sys.path :
     sys.path.append(dirname(realpath(__file__)))
 if dirname(os.getcwd()) not in sys.path :
     sys.path.append(os.getcwd())
+if Path(os.path.dirname(os.path.realpath(__file__))).parent not in sys.path :
+    sys.path.append(str(Path(os.path.dirname(os.path.realpath(__file__))).parent))  
+if Path(os.path.dirname(os.path.realpath(__file__))).parent.parent not in sys.path :
+    sys.path.append(str(Path(os.path.dirname(os.path.realpath(__file__))).parent.parent))  
+
 
 import logging
 from logging.handlers import TimedRotatingFileHandler
@@ -53,7 +59,7 @@ class Config:
     DEBUG = False
     TESTING = False
     CSRF_ENABLED = True
-    SECRET_KEY = 'this-really-needs-to-be-changed'
+    SECRET_KEY = ''
     SERVER_PORT = 5000
 
 
