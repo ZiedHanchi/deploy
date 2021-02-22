@@ -192,7 +192,7 @@ def validate_inputs(input_data):
             dict[key] = dict[value]
             del dict[value]
 
-    if errors:
+    if errors:/home/zied/deploy/deploy
         validated_input = _filter_error_rows(
             errors=errors,
             validated_input=input_data)
@@ -202,4 +202,20 @@ def validate_inputs(input_data):
     return validated_input, errors
 ```
 
+## Preuves de réalisation :
 
+**Visual studio code :**
+
+![](img/VS-CODES.png)
+  
+**GitHUB :**
+  
+![](img/GitHub.png)
+  
+**CircleCI :**
+
+![](img/CircleCI.png)
+  
+**Gemfury :**
+
+![](img/Gemfury.png)
