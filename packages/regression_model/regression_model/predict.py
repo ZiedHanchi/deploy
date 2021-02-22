@@ -42,3 +42,5 @@ def make_prediction(*, input_data) -> dict:
     )
 
     return results
+
+make_prediction()
